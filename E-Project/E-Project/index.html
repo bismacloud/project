@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PATRONA Puppy</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-inner">
+
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+            <a href="#" class="logo">
+                <span class="main-logo">PATRONA</span>
+                <span class="sub-logo">Pets Encyclopedia</span>
+            </a>
+            <nav class="nav" id="navMenu">
+                <a href="">Breeds</a>
+                <a href="behavior.html">Behavior</a>
+                <!-- <a href="">Gallery</a> -->
+                <a href="">Nutrition</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="search">
+                <input type="search" id="searchbar" placeholder="Search breeds..." onkeyup="filterDogs()">
+                <button onclick="searchFunction()" id="navbtn">Search</button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero -->
+
+    <div class="hero">
+        <h2>MEET EVERY <br><span> BREED.</span></h2>
+        <p>Explore detailed insights into the behavior, care, and characteristics of dogs, cats, and rabbits. 
+PATRONA helps you understand your pets better and build a stronger bond with them.</p>
+        <div class="herobtn">
+            <button>EXPLORE BREEDS</button>
+            <!-- <button>VIEW GALLERY</button> -->
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-sec" id="contact">
+        <div class="contact-left">
+            <h2>Ask Patrona a Question</h2>
+            <p>Have questions or suggestions? We’d love to hear from you.
+                 Reach out to us and we’ll get back to you as soon as possible.</p>
+        </div>
+        <form class="qform" id="contactForm">
+            <input type="text" id="user_name" placeholder="Your name">
+            <input type="email" id="user_email" placeholder="Email address">
+            <select>
+                <option value="">Select animal type...</option>
+                <option>Dogs</option>
+                <option>Cats</option>
+                <option>Rabbits</option>
+                <option>Other</option>
+            </select>
+            <select>
+                <option value="">Question topic...</option>
+                <option>Breed Information</option>
+                <option>Behavior & Training</option>
+                <option>Health & Nutrition</option>
+                <option>Photography / Gallery</option>
+                <option>Other</option>
+            </select>
+            <textarea id="message" placeholder="Your question in detail"></textarea>
+            <button type="button" onclick="sendEmail()">Submit Question →</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="f1">
+            <span class="main-logo"
+                style="font-family:'Playfair Display', serif; font-size: 1.6rem; color: #c8a96e; letter-spacing: 3px;">PATRONA</span>
+            <p>PATRONA is your trusted pet encyclopedia, offering detailed insights into the behavior, care, and
+                characteristics of dogs, cats, and rabbits. Our goal is to help pet lovers understand their companions
+                better and build stronger, happier relationships.</p>
+        </div>
+        <div class="fcol">
+            <h5>Animals</h5>
+            <a href="#">Dogs</a><a href="#">Cats</a><a href="#">Rabbits</a>
+            <a href="#">Rare Breeds</a><a href="#">By Country</a>
+        </div>
+        <div class="fcol">
+            <h5>Resources</h5>
+            <a href="#">Nutrition</a><a href="#">Training</a><a href="#">Health</a>
+            <a href="#">Gallery</a><a href="#">Blog</a>
+        </div>
+        <div class="fcol">
+            <h5>Contact</h5>
+            <a href="#">Ask a Question</a><a href="#">Submit Photos</a><a href="about.html">About Patrona</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="fbot">
+             <span>&copy;2026 PATRONA - Animal Encyclopedia</span>
+             <span>Enhancing Education Through Technology</span>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+
+<script>
+    function toggleMenu() {
+        let menu = document.getElementById("navMenu");
+        menu.classList.toggle("active");
+    }
+</script>
+
+</html>
