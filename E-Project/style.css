@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 85px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #6b4226;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3;
+    color: white;
+}
+
+.nav-inner a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3;
+}
+
+nav a:hover {
+    color: #c8a96e;
+}
+
+.nav-inner nav {
+    display: flex;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #c8a96e;
+    letter-spacing: 3px;
+    font-family: 'Playfair Display', serif;
+}
+
+.sub-logo {
+    font-size: 10px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.search {
+    /* height: 50px;
+width: 200px; */
+    margin: 20px;
+    text-align: center;
+
+}
+
+.search input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+#navbtn {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #c8a96e;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 4px 4px black;
+    border: none;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+}
+
+#navbtn:hover {
+    background-color: white;
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 25px;
+        z-index: 1001;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .nav {
+        display: none !important;
+        position: absolute;
+        top: 90px;
+        left: 10px;
+        background: #6b4226;
+        width: 200px;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .nav.active {
+        display: flex !important;
+    }
+
+    .nav a {
+        margin: 10px 0;
+    }
+
+    .search {
+        display: none;
+    }
+}
+
+/* Hero */
+
+.hero {
+    margin-top: 100px;
+    height: calc(100vh - 100px);
+    background-image: url(dog-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+.hero h2 {
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.2rem;
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.hero h2 span {
+    color: #c8a96e;
+}
+
+.hero p {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    max-width: 560px;
+    color: #ddd;
+}
+
+.herobtn {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero button {
+    padding: 12px 28px;
+    font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: #c8a96e;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background-color: white;
+    color: black;
+}
+
+.contact-sec {
+    background: #6b4226;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-left {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact-left p {
+    font-size: 0.88rem;
+    color: #c8b090;
+    line-height: 1.8;
+}
+
+.qform {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.qform input,
+.qform select,
+.qform textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+}
+
+.qform input::placeholder,
+.qform textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.qform input:focus,
+.qform select:focus,
+.qform textarea:focus {
+    border-color: #c8a96e;
+}
+
+.qform select option {
+    background: #6b4226;
+    color: white;
+}
+
+.qform textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+.qform button{
+    width: 100%;
+    padding: 1rem;
+    background: #c8a96e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: 'DM Sans' , sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.qform button:hover{
+    background: white;
+    color: #1a1208;
+}
+
+footer{
+    background: #1a1208;
+    padding: 3rem 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.f1 p{
+    font-size: 0.8rem;
+    color: #6a5a4a;
+    line-height: 1.8;
+    margin-top: 0.75rem;
+}
+
+.fcol h5{
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4a3a2a;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.fcol a{
+    display: block;
+    color: #6a5a4a;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s;
+}
+
+.fcol a:hover{
+    color: #c8a96e;
+}
+
+.fbot{
+    grid-column: 1/-1;
+    border-top: 1px solid #2a1a0a;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: #4a3a2a;
+}
